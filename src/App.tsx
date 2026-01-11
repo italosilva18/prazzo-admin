@@ -8,6 +8,7 @@ import Users from './pages/Users'
 import Billing from './pages/Billing'
 import Analytics from './pages/Analytics'
 import System from './pages/System'
+import Support from './pages/Support'
 import { DashboardLayout } from './components/layout/DashboardLayout'
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
@@ -42,6 +43,7 @@ function App() {
           <Route path="users" element={<Users />} />
           <Route path="billing" element={<Billing />} />
           <Route path="analytics" element={<Analytics />} />
+          <Route path="support" element={<Support />} />
           <Route path="system" element={<System />} />
         </Route>
       </Routes>

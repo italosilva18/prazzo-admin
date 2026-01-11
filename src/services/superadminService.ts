@@ -91,6 +91,32 @@ export const superadminService = {
     const { data } = await api.post('/superadmin/system/maintenance', { enabled, message })
     return data
   },
+
+  // Support
+  getSupportStats: async () => {
+    const { data } = await api.get('/superadmin/support/stats')
+    return data.data
+  },
+
+  getTickets: async (params?: { company_id?: string; status?: string; priority?: string; page?: number; limit?: number }) => {
+    const { data } = await api.get('/superadmin/support/tickets', { params })
+    return data
+  },
+
+  getTicketDetail: async (id: string) => {
+    const { data } = await api.get(`/superadmin/support/tickets/${id}`)
+    return data.data
+  },
+
+  updateTicket: async (id: string, ticketData: { status?: string; priority?: string }) => {
+    const { data } = await api.put(`/superadmin/support/tickets/${id}`, ticketData)
+    return data
+  },
+
+  replyTicket: async (id: string, message: string) => {
+    const { data } = await api.post(`/superadmin/support/tickets/${id}/reply`, { message })
+    return data
+  },
 }
 
 export const authService = {
