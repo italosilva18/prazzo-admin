@@ -1,0 +1,30 @@
+{
+  "title": "Dashboard",
+  "subtitle": "Visao geral do sistema",
+  "stats": {
+    "companies": "Empresas",
+    "users": "Usuarios",
+    "mrr": "MRR",
+    "tasks": "Tarefas",
+    "active": "ativas",
+    "activeUsers": "ativos (30d)"
+  },
+  "charts": {
+    "companiesByPlan": "Empresas por Plano",
+    "topCompanies": "Top Empresas",
+    "noData": "Sem dados"
+  },
+  "systemHealth": {
+    "title": "Saude do Sistema",
+    "database": "Database",
+    "api": "API",
+    "cache": "Cache",
+    "uptime": "Uptime"
+  },
+  "plans": {
+    "free": "Free",
+    "basic": "Basic",
+    "pro": "Pro",
+    "enterprise": "Enterprise"
+  }
+}

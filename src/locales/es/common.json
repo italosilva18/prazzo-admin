@@ -1,0 +1,90 @@
+{
+  "app": {
+    "name": "Prazzo Admin",
+    "tagline": "Panel de Administracion SaaS"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "companies": "Empresas",
+    "users": "Usuarios",
+    "billing": "Facturacion",
+    "billingOverview": "Vision General",
+    "plans": "Planes",
+    "subscriptions": "Suscripciones",
+    "invoices": "Facturas",
+    "analytics": "Analiticas",
+    "analyticsOverview": "Vision General",
+    "usage": "Metricas de Uso",
+    "growth": "Crecimiento",
+    "companiesRanking": "Ranking Empresas",
+    "support": "Soporte",
+    "system": "Sistema",
+    "notifications": "Notificaciones",
+    "broadcast": "Broadcast",
+    "profile": "Mi Perfil",
+    "logout": "Salir",
+    "mainMenu": "Menu Principal",
+    "account": "Cuenta"
+  },
+  "actions": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "add": "Agregar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "export": "Exportar",
+    "confirm": "Confirmar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "close": "Cerrar",
+    "view": "Ver",
+    "viewAll": "Ver Todos",
+    "submit": "Enviar",
+    "retry": "Reintentar",
+    "refresh": "Actualizar"
+  },
+  "status": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Exito",
+    "pending": "Pendiente",
+    "completed": "Completado",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "healthy": "Saludable",
+    "operational": "Operacional"
+  },
+  "time": {
+    "today": "Hoy",
+    "yesterday": "Ayer",
+    "thisWeek": "Esta Semana",
+    "thisMonth": "Este Mes",
+    "lastMonth": "Mes Pasado",
+    "last30Days": "Ultimos 30 dias"
+  },
+  "validation": {
+    "required": "Campo obligatorio",
+    "invalidEmail": "Correo invalido",
+    "invalidPassword": "Contrasena invalida",
+    "minLength": "Minimo {{count}} caracteres",
+    "maxLength": "Maximo {{count}} caracteres"
+  },
+  "roles": {
+    "superadmin": "Super Administrador",
+    "admin": "Administrador SaaS"
+  },
+  "language": {
+    "select": "Seleccionar idioma",
+    "pt-BR": "Portugues (Brasil)",
+    "en": "Ingles",
+    "es": "Espanol"
+  },
+  "empty": {
+    "noData": "No se encontraron datos",
+    "noResults": "No se encontraron resultados"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "generic": "Ocorreu um erro. Tente novamente.",
+  "network": "Erro de conexao. Verifique sua internet.",
+  "timeout": "A requisicao demorou muito. Tente novamente.",
+  "notFound": "Pagina nao encontrada",
+  "unauthorized": "Voce nao tem permissao para acessar esta pagina",
+  "forbidden": "Acesso negado",
+  "serverError": "Erro no servidor. Tente novamente mais tarde.",
+  "validation": "Por favor, verifique os dados informados",
+  "sessionExpired": "Sua sessao expirou. Por favor, faca login novamente.",
+  "api": {
+    "fetchFailed": "Falha ao carregar dados",
+    "saveFailed": "Falha ao salvar dados",
+    "deleteFailed": "Falha ao excluir dados"
+  }
+}

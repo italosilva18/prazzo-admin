@@ -1,0 +1,90 @@
+{
+  "app": {
+    "name": "Prazzo Admin",
+    "tagline": "SaaS Administration Panel"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "companies": "Companies",
+    "users": "Users",
+    "billing": "Billing",
+    "billingOverview": "Overview",
+    "plans": "Plans",
+    "subscriptions": "Subscriptions",
+    "invoices": "Invoices",
+    "analytics": "Analytics",
+    "analyticsOverview": "Overview",
+    "usage": "Usage Metrics",
+    "growth": "Growth",
+    "companiesRanking": "Companies Ranking",
+    "support": "Support",
+    "system": "System",
+    "notifications": "Notifications",
+    "broadcast": "Broadcast",
+    "profile": "My Profile",
+    "logout": "Logout",
+    "mainMenu": "Main Menu",
+    "account": "Account"
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "add": "Add",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "view": "View",
+    "viewAll": "View All",
+    "submit": "Submit",
+    "retry": "Retry",
+    "refresh": "Refresh"
+  },
+  "status": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "pending": "Pending",
+    "completed": "Completed",
+    "active": "Active",
+    "inactive": "Inactive",
+    "healthy": "Healthy",
+    "operational": "Operational"
+  },
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "thisWeek": "This Week",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month",
+    "last30Days": "Last 30 days"
+  },
+  "validation": {
+    "required": "Required field",
+    "invalidEmail": "Invalid email",
+    "invalidPassword": "Invalid password",
+    "minLength": "Minimum {{count}} characters",
+    "maxLength": "Maximum {{count}} characters"
+  },
+  "roles": {
+    "superadmin": "Super Administrator",
+    "admin": "SaaS Administrator"
+  },
+  "language": {
+    "select": "Select language",
+    "pt-BR": "Portuguese (Brazil)",
+    "en": "English",
+    "es": "Spanish"
+  },
+  "empty": {
+    "noData": "No data found",
+    "noResults": "No results found"
+  }
+}

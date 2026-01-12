@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { toast } from 'sonner'
 import { useAuthStore } from '@/store/auth'
 import { authService } from '@/services/superadminService'
+import { LanguageSwitcherCompact } from '@/components/LanguageSwitcher'
 
 export default function Login() {
+  const { t } = useTranslation('auth')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
@@ -15,7 +18,7 @@ export default function Login() {
     e.preventDefault()
 
     if (!email || !password) {
-      toast.error('Preencha todos os campos')
+      toast.error(t('login.fillAllFields'))
       return
     }
 
@@ -24,33 +27,38 @@ export default function Login() {
       const data = await authService.login(email, password)
 
       if (data.user.role !== 'superadmin') {
-        toast.error('Acesso negado. Apenas superadmins podem acessar este painel.')
+        toast.error(t('login.accessDenied'))
         return
       }
 
       setAuth(data.user, data.token)
-      toast.success('Login realizado com sucesso!')
+      toast.success(t('login.success'))
       navigate('/')
     } catch (error: any) {
-      toast.error(error.response?.data?.message || 'Erro ao fazer login')
+      toast.error(error.response?.data?.message || t('errors.generic'))
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4 relative">
+      {/* Language Switcher */}
+      <div className="absolute top-4 right-4">
+        <LanguageSwitcherCompact />
+      </div>
+
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
-            <h1 className="text-2xl font-bold text-gray-900">Prazzo Admin</h1>
-            <p className="text-gray-500 mt-2">Painel de Administracao SaaS</p>
+            <h1 className="text-2xl font-bold text-gray-900">{t('login.title')}</h1>
+            <p className="text-gray-500 mt-2">{t('login.subtitle')}</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                E-mail
+                {t('login.email')}
               </label>
               <input
                 id="email"
@@ -58,13 +66,13 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                placeholder="superadmin@prazzo.com"
+                placeholder={t('login.emailPlaceholder')}
               />
             </div>
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                Senha
+                {t('login.password')}
               </label>
               <input
                 id="password"
@@ -72,7 +80,7 @@ export default function Login() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent"
-                placeholder="********"
+                placeholder={t('login.passwordPlaceholder')}
               />
             </div>
 
@@ -81,7 +89,7 @@ export default function Login() {
               disabled={loading}
               className="w-full py-2 px-4 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
-              {loading ? 'Entrando...' : 'Entrar'}
+              {loading ? t('login.submitting') : t('login.submit')}
             </button>
           </form>
         </div>

@@ -1,4 +1,4 @@
-import { Bell, Search, ChevronDown } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useAuthStore } from "@/store/auth";
 import { useNavigate } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
+import { NotificationBell } from "@/components/notifications/NotificationBell";
 
 interface DesktopHeaderProps {
   title?: string;
@@ -45,12 +45,7 @@ export function DesktopHeader({ title, subtitle }: DesktopHeaderProps) {
         </div>
 
         {/* Notifications */}
-        <Button variant="ghost" size="icon" className="relative">
-          <Bell className="w-5 h-5" />
-          <Badge className="absolute -top-1 -right-1 w-5 h-5 p-0 flex items-center justify-center text-[10px]">
-            0
-          </Badge>
-        </Button>
+        <NotificationBell />
 
         {/* User Menu */}
         <DropdownMenu>

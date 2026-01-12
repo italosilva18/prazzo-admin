@@ -1,0 +1,16 @@
+{
+  "generic": "An error occurred. Please try again.",
+  "network": "Connection error. Check your internet.",
+  "timeout": "Request timed out. Please try again.",
+  "notFound": "Page not found",
+  "unauthorized": "You don't have permission to access this page",
+  "forbidden": "Access denied",
+  "serverError": "Server error. Please try again later.",
+  "validation": "Please check the provided data",
+  "sessionExpired": "Your session has expired. Please login again.",
+  "api": {
+    "fetchFailed": "Failed to load data",
+    "saveFailed": "Failed to save data",
+    "deleteFailed": "Failed to delete data"
+  }
+}
